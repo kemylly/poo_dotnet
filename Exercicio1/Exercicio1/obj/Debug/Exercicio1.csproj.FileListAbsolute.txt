@@ -1,0 +1,7 @@
+C:\Users\Kemily\Documents\gft\POO\Exercicio1\Exercicio1\obj\Debug\Exercicio1.csprojAssemblyReference.cache
+C:\Users\Kemily\Documents\gft\POO\Exercicio1\Exercicio1\obj\Debug\Exercicio1.csproj.CoreCompileInputs.cache
+C:\Users\Kemily\Documents\gft\POO\Exercicio1\Exercicio1\bin\Debug\Exercicio1.exe.config
+C:\Users\Kemily\Documents\gft\POO\Exercicio1\Exercicio1\bin\Debug\Exercicio1.exe
+C:\Users\Kemily\Documents\gft\POO\Exercicio1\Exercicio1\bin\Debug\Exercicio1.pdb
+C:\Users\Kemily\Documents\gft\POO\Exercicio1\Exercicio1\obj\Debug\Exercicio1.exe
+C:\Users\Kemily\Documents\gft\POO\Exercicio1\Exercicio1\obj\Debug\Exercicio1.pdb
