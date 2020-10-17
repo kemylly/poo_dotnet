@@ -25,6 +25,9 @@ namespace Exercicio3
 
             //Mago Magia = new Mago("Agua");
 
+            Mago mago = new Mago();
+            Guerreiro guerreiro = new Guerreiro();
+
             int resp = 0;
             while(resp != 5)
             {
@@ -32,10 +35,35 @@ namespace Exercicio3
                 if (resp == 1)
                 {
 
+                    Console.ReadKey();
                 }
                 else
                 {
+                    if(resp == 2)
+                    {
+                        mago.AprenderMagia();
+                        Console.ReadKey();
+                    }
+                    else
+                    {
+                        if(resp == 3)
+                        {
+                            guerreiro.AprenderHabilidade();
+                            Console.ReadKey();
+                        }
+                        else
+                        {
+                            if(resp == 4)
+                            {
 
+                                Console.ReadKey();
+                            }
+                            else
+                            {
+                                
+                            }
+                        }
+                    }
                 }
             }
             static int Inicio()
