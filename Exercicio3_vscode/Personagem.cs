@@ -16,7 +16,7 @@ namespace Exercicio3
             Level = 0;
         }
 
-        public Personagem(String name, int vida, int mana, float xp, int inteligencia, int forca, int level)
+        public Personagem(String nome, int vida, int mana, float xp, int inteligencia, int forca, int level)
         {
             Nome = "";
             Vida = 0;
