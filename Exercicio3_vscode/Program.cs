@@ -6,7 +6,8 @@ namespace Exercicio3
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Personagem m = new Mago();
+            Personagem g = new Guerreiro();
         }
     }
 }
