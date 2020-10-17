@@ -93,21 +93,17 @@ namespace Exercicio4
 
             Console.WriteLine(" ");
 
-            //String procurase = "Jessica";
-            //bool existe;
 
-            //lista = Convert.ToString();
+            bool existe = lista.Contains(p3); //verificando de jessica existe
 
-            //existe = lista.Contains(procurase);
-
-            /*if (existe)
+            if (existe)
             {
-                Console.WriteLine("Idade: ");
+                Console.WriteLine("Idade: " + p3.Idade); //mostrando a idade se ela existir
             }
             else
             {
                 Console.WriteLine("nao existe");
-            } */
+            } 
 
             Console.ReadKey();
         }
