@@ -1,0 +1,7 @@
+C:\Users\Kemily\Documents\Quarentena\Exercicio7\Exercicio7\bin\Debug\Exercicio7.exe.config
+C:\Users\Kemily\Documents\Quarentena\Exercicio7\Exercicio7\bin\Debug\Exercicio7.exe
+C:\Users\Kemily\Documents\Quarentena\Exercicio7\Exercicio7\bin\Debug\Exercicio7.pdb
+C:\Users\Kemily\Documents\Quarentena\Exercicio7\Exercicio7\obj\Debug\Exercicio7.csprojAssemblyReference.cache
+C:\Users\Kemily\Documents\Quarentena\Exercicio7\Exercicio7\obj\Debug\Exercicio7.csproj.CoreCompileInputs.cache
+C:\Users\Kemily\Documents\Quarentena\Exercicio7\Exercicio7\obj\Debug\Exercicio7.exe
+C:\Users\Kemily\Documents\Quarentena\Exercicio7\Exercicio7\obj\Debug\Exercicio7.pdb
