@@ -8,7 +8,7 @@ namespace Exercicio7
 {
     class Gerente: Funcionario
     {
-        public void Bonificacao()
+        public override void Bonificacao()
         {
             Console.WriteLine("Salario: " + (this.Salario + 10000));
             //return Salario + 10000.00;

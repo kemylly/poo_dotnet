@@ -12,19 +12,28 @@ namespace Exercicio7
         {
             //instanciando os objetos
             //Funcionario f = new Funcionario();
-            Vendedor v = new Vendedor();
-            Gerente g = new Gerente();
-            Supervisor s = new Supervisor();
+
+           // Vendedor v = new Vendedor();
+            Funcionario v = new Vendedor();
+
+            //Gerente g = new Gerente();
+            Funcionario g = new Gerente();
+
+            //Supervisor s = new Supervisor();
+            Funcionario s = new Supervisor();
 
             //cadastro de informacoes
+            //vendedor
             v.Nome = "Luis";
             v.Idade = 20;
             v.Salario = 1000;
 
+            //gerente
             g.Nome = "Ana";
             g.Idade = 37;
             g.Salario = 2000;
 
+            //supervisor
             s.Nome = "Alex";
             s.Idade = 28;
             s.Salario = 3000;

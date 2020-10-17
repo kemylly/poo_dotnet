@@ -48,10 +48,10 @@ namespace Exercicio7
             set { salario = value; }
         }
 
-        public double Bonificacao()
+        public virtual void Bonificacao()
         {
-
-            return Salario;
+            //metodo principal - padrao
+            //return Salario;
         }
     }
 }
