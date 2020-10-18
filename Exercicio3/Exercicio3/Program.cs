@@ -51,7 +51,7 @@ namespace Exercicio3
             while(resp != 5)
             {
                 resp = Inicio();
-                if (resp == 1)
+                if (resp == 1) //lista personagens
                 {
                     //int escolha = 0;
 
@@ -100,31 +100,94 @@ namespace Exercicio3
                     //Console.WriteLine(" ");
                     //perso = Convert.ToInt32(Console.ReadLine());
 
-                    //Personagem personagem = g
                     Console.ReadKey();
                 }
+                //fim da listagem de personagens
+
                 else
                 {
-                    if(resp == 2)
+                    if(resp == 2) //lista magias
                     {
                         //tenho que pegar o personagem
-                        mago.AprenderMagia();
-                        Console.ReadKey();
-                    }
-                    else
-                    {
-                        if(resp == 3)
+                        if(escolha == 1)
                         {
-                            //tenho que pegar o personagem
-                            guerreiro.AprenderHabilidade();
-                            Console.ReadKey();
+                            for (int s = 0; s < magos.Count; s++)
+                            {
+                                Mago ma = magos[s];
+                               
+                                if (perso == ma.Nome)
+                                {
+                                    mago.AprenderMagia(ma.XP, ma.Inteligencia, ma.Level, ma.Mana, ma.Forca);
+                                }
+                            }
                         }
                         else
                         {
-                            if(resp == 4)
+                            if(escolha == 2)
                             {
-                                //gerar dinamicamente o personagem o pc
-                                //pegar o personagem do player
+                                Console.WriteLine("Voce escolheu um personagem Guerreiro. Ele nao consgue aprender magia.");
+                                Console.WriteLine("Va em Listar Habilidades e escolha alguma.");
+
+                                Console.Clear();
+                            }
+                            else
+                            {
+                                Console.WriteLine("Parece que voce não escolheu um personagem ainda!");
+                                Console.WriteLine("Va em Listar personagens e escolha algum");
+
+                                Console.Clear();
+                            }
+                        }
+                        //mago.AprenderMagia();
+                        Console.ReadKey();
+                    }
+                    //fim do aprender magia
+
+                    else
+                    {
+                        if(resp == 3) //lista habilidades
+                        {
+                            if (escolha == 1)
+                            {
+                                Console.WriteLine("Voce escolheu um personagem Mago. Ele nao consgue aprender Habilidades.");
+                                Console.WriteLine("Va em Listar Magias e escolha alguma.");
+
+                                Console.Clear();
+                            }
+                            else
+                            {
+                                if (escolha == 2) //listar habilidades
+                                {
+                                    for (int s = 0; s < guerreiros.Count; s++)
+                                    {
+                                        Guerreiro gr = guerreiros[s];
+                                        
+                                        if (perso == gr.Nome)
+                                        {
+                                            guerreiro.AprenderHabilidade(gr.XP, gr.Inteligencia, gr.Level, gr.Mana, gr.Forca);
+                                        }
+                                    }
+                                   
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Parece que voce não escolheu um personagem ainda!");
+                                    Console.WriteLine("Va em Listar personagens e escolha algum");
+
+                                    Console.Clear();
+                                }
+                            }
+                            //guerreiro.AprenderHabilidade();
+                            Console.ReadKey();
+                        }
+                        //fim de aprender habilidade
+
+                        else
+                        {
+                            if(resp == 4) //lutar - batalhar
+                            {
+                                //utiliza o metodo de ataque 
+                                //e se vencer sobe de nivel
                                 Personagem p = new Personagem();
 
                                 //gerar random
@@ -148,7 +211,7 @@ namespace Exercicio3
                                 if (escolha == 1)
                                 {
                                     //mago.attack(perso);
-                                    for (int s = 0; s < guerreiros.Count; s++)
+                                    for (int s = 0; s < magos.Count; s++)
                                     {
                                         Mago mo = magos[s];
                                         //String ps = guerreiro[s];
@@ -156,7 +219,7 @@ namespace Exercicio3
                                         if (perso == mo.Nome)
                                         {
 
-                                            guerreiro.attack(mo.Inteligencia, mo.Level);
+                                            mago.attack(mo.Inteligencia, mo.Level);
                                         }
                                     }
                                 }
@@ -172,7 +235,7 @@ namespace Exercicio3
                                             if (perso == go.Nome)
                                             {
 
-                                                guerreiro.attack(go.Inteligencia, go.Level);
+                                                guerreiro.attack(go.Forca, go.Level);
                                             }
                                         }
                                         //int qtd = guerreiros.Count();
@@ -182,6 +245,8 @@ namespace Exercicio3
                                     {
                                         Console.WriteLine("Parece que voce não escolheu um personagem ainda!");
                                         Console.WriteLine("Va em Listar personagens e escolha algum");
+
+                                        Console.Clear();
 
                                     }
 
@@ -193,15 +258,17 @@ namespace Exercicio3
 
                                 Console.ReadKey();
                             }
+                            //fim da luta
+
                             else
                             {
-                                
+                                //fecha o programa
                             }
                         }
                     }
                 }
             }
-            static int Inicio()
+            static int Inicio()//menu
             {
                 Console.WriteLine("**Bem vindo aos Gurreiros vs Magos**");
                 Console.WriteLine("1 - Listar personagens");

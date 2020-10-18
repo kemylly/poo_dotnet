@@ -49,9 +49,10 @@ namespace Exercicio3
             aux = r.Next(300);
 
             ataque1 = Inteligencia * Level + aux;
-            Console.WriteLine("Mens: " + Inteligencia + " " + Level + " " + aux + " " + ataque1);
+            Console.WriteLine("Mens: " + Inteligencia + " " + Level + " " + aux + " = " + ataque1);
             //verificar de quem é o maior ataque
         }
+
         public override void LvUp()
         {
             //se mago vencer aumentar o nivel dele
@@ -61,7 +62,7 @@ namespace Exercicio3
             Inteligencia = Inteligencia + 20;
         }
 
-        public void AprenderMagia()
+        public void AprenderMagia(float XP, int Level, int Inteligencia, int Mana, int Forca)
         {
             Console.WriteLine("Digite o numero da magia que deseja aprender: ");
             /*Console.WriteLine("1 - Agua ");
@@ -87,16 +88,11 @@ namespace Exercicio3
 
             if(elemento == 1) //agua
             {
-                //tenho que identificar qual é o personagem
-                //if(Nome == "Kemylly")
-                //{
                     XP = XP + 10;
                     Level = Level + 1;
                     Inteligencia = Inteligencia + 50;
                     Mana = Mana + 50;
                     Forca = Forca + 10;
-               // }
-                
             }
             else
             {

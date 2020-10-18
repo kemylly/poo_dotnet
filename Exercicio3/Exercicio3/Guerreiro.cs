@@ -39,7 +39,7 @@ namespace Exercicio3
         }
 
         //metodos
-        public void attack(int Inteligencia, int Level)
+        public void attack(int Forca, int Level) //ataque da batalha
         {
             int ataque1 = 0;
             int aux;
@@ -48,13 +48,14 @@ namespace Exercicio3
             Random r = new Random();
             //int valor = r.Next(qtd);
             aux = r.Next(300);
-            ataque1 = Inteligencia * Level + aux;
+            ataque1 = Forca * Level + aux;
 
-            Console.WriteLine("Mens: "+ Inteligencia + " " + Level + " " + aux + " " + ataque1);
+            Console.WriteLine("Mens: "+ Forca + " " + Level + " " + aux + " = " + ataque1);
             //verificar de quem é o maior ataque
 
         }
-        public override void LvUp()
+
+        public override void LvUp() //subir de nivel se eu ganhar uma batalha
         {
             //se guerreiro vencer aumentar o nivel dele
             //atributos vida e forca
@@ -63,7 +64,7 @@ namespace Exercicio3
             Forca = +20;
         }
 
-        public void AprenderHabilidade()
+        public void AprenderHabilidade(float XP, int Level, int Inteligencia, int Mana, int Forca)
         {
             Console.WriteLine("Digite o numero da habilidade que deseja aprender: ");
 
@@ -83,22 +84,17 @@ namespace Exercicio3
             Console.Write("Resposta: ");
             int elemento = Convert.ToInt32(Console.ReadLine());
 
-            if (elemento == 1) //agua
+            if (elemento == 1) //espada
             {
-                //tenho que identificar qual é o personagem
-                //if (Nome == "Kemylly")
-                //{
                     XP = XP + 10;
                     Level = Level + 1;
                     Inteligencia = Inteligencia + 50;
                     Mana = Mana + 50;
                     Forca = Forca + 10;
-                //}
-
             }
             else
             {
-                if (elemento == 2)
+                if (elemento == 2) //lutar
                 {
                     XP = XP + 15;
                     Level = Level + 1;
@@ -108,7 +104,7 @@ namespace Exercicio3
                 }
                 else
                 {
-                    if (elemento == 3)
+                    if (elemento == 3) //arco
                     {
                         XP = XP + 15;
                         Level = Level + 1;
@@ -118,7 +114,7 @@ namespace Exercicio3
                     }
                     else
                     {
-                        if (elemento == 4)
+                        if (elemento == 4) //lanca
                         {
                             XP = XP + 10;
                             Level = Level + 1;
