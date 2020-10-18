@@ -51,19 +51,19 @@ namespace Exercicio3
             ataque = Inteligencia * Level + aux; //calculando ataque
 
             Console.WriteLine("Numero Randomico : " + aux + " | Total do ataque: " + ataque);
-            
-            
+
+            //return ataque;
         }
 
-        public override void LvUp()
+        public override void LvUp(String Nome)
         {
             //se mago vencer aumentar o nivel dele
             //atributos mana e inteligencia
             Level++;
 
             Random r3 = new Random();
-            Mana = Mana + r3.Next(50);
 
+            Mana = Mana + r3.Next(50);
             Inteligencia = Inteligencia + r3.Next(50);
 
             Console.WriteLine("Parabens Mestre Mago, voce subiu de nivel");

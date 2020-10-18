@@ -82,9 +82,16 @@ namespace Exercicio3
         }
 
         //metodo com polimorfismo
-        public virtual void LvUp()
+        public virtual void LvUp(String Nome)
         {
+            Console.WriteLine("Voce est usando o Metodo padrao para subir de nivel");
+            //falta uma identificacao pata sabeer de quem estou falando
 
+            Level++;
+            Vida = +10;
+            Forca = +10;
+            Mana = +10;
+            Inteligencia = +10;
         }
     }
 }

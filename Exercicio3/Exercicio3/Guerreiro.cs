@@ -61,12 +61,12 @@ namespace Exercicio3
             Level++;
 
             Random r3 = new Random();
-            Mana = Mana + r3.Next(50);
 
-            Inteligencia = Inteligencia + r3.Next(50);
+            Vida = Vida + r3.Next(50);
+            Forca = Forca + r3.Next(50);
 
             Console.WriteLine("Parabens Mestre Mago, voce subiu de nivel");
-            Console.WriteLine("Voce recebeu " + Mana + " de mana. E " + Inteligencia + " de inteligencia");
+            Console.WriteLine("Voce recebeu " + Vida + " de vida. E " + Forca + " de forca");
         }
 
         public void AprenderHabilidade(float XP, int Level, int Inteligencia, int Mana, int Forca)

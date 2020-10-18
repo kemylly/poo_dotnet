@@ -234,8 +234,8 @@ namespace Exercicio3
                                             Console.WriteLine("** Jogador 1 **");
                                             Console.WriteLine("Nome: " + mo.Nome + " | Inteligencia: " + mo.Inteligencia + " | Nivel: " + mo.Level);
                                             mago.attack(mo.Inteligencia, mo.Level);
-                                            ///int ataque1 = mago.attack(ataque);
-                                             
+                                            
+                                            //int ataque1 = mago.attack(ataque); 
                                         }
                                     }
 
@@ -251,17 +251,28 @@ namespace Exercicio3
                                     Console.WriteLine("\n** Jogador 2 **");
                                     Console.WriteLine("Nome: " + Nome1 + " | Inteligencia: " + Inteligencia1 + " | Nivel: " + Level1);
                                     mago.attack(Inteligencia1, Level1);
-                                    
-                                    if(ataque1 > ataque2)
+
+                                    //int ataque2 = mago.attack(ataque); 
+
+                                    /*if(ataque1 > ataque2)
                                     {
                                         Console.WriteLine("\nVoce venceu");
-                                        mago.LvUp();
+                                        for (int s = 0; s < magos.Count; s++) 
+                                        {
+                                            Mago mo = magos[s];
+                                            
+                                            if (perso == mo.Nome)
+                                            {
+                                                mago.LvUp(perso);
+                                            }
+                                        }
+                                       
                                     }
                                     else
                                     {
                                         Console.WriteLine("\nVoce perdeu");
-                                    }
-                                    
+                                    }*/
+
                                 }
 
                                 else
@@ -294,7 +305,7 @@ namespace Exercicio3
                                         Console.WriteLine("Nome: " + Nome1 + " | Inteligencia: " + Inteligencia1 + " | Nivel: " + Level1);
                                         mago.attack(Inteligencia1, Level1);
                                         
-                                        if (mago.attack > )
+                                        /*if (mago.attack > )
                                         {
                                             Console.WriteLine("\nVoce venceu");
                                             mago.LvUp();
@@ -302,7 +313,7 @@ namespace Exercicio3
                                         else
                                         {
                                             Console.WriteLine("\nVoce perdeu");
-                                        }
+                                        }*/
                                     }
                                     else
                                     {
