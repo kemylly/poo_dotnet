@@ -48,8 +48,10 @@ namespace Exercicio3
 
             aux = r.Next(300);
 
-            ataque1 = Inteligencia * Level + aux;
-            Console.WriteLine("Mens: " + Inteligencia + " " + Level + " " + aux + " = " + ataque1);
+            ataque1 = Inteligencia * Level + aux; //calculando ataque
+
+            Console.WriteLine("Numero Randomico : " + aux + " | Total do ataque: " + ataque1);
+
             //verificar de quem é o maior ataque
         }
 
@@ -96,7 +98,7 @@ namespace Exercicio3
             }
             else
             {
-                if(elemento == 2)
+                if(elemento == 2) //fogo
                 {
                     XP = XP + 15;
                     Level = Level + 1;
@@ -106,7 +108,7 @@ namespace Exercicio3
                 }
                 else
                 {
-                    if(elemento == 3)
+                    if(elemento == 3) //vento
                     {
                         XP = XP + 15;
                         Level = Level + 1;
@@ -116,7 +118,7 @@ namespace Exercicio3
                     }
                     else
                     {
-                        if(elemento == 4)
+                        if(elemento == 4) //terra
                         {
                             XP = XP + 10;
                             Level = Level + 1;

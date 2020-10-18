@@ -62,6 +62,7 @@ namespace Exercicio3
 
                     if(escolha == 1)
                     {
+                        Console.WriteLine(" ");
                         Console.WriteLine(" NOME   |  VIDA | MANA | INTELIGENCIA | FORCA | LEVEL ");
                         Console.WriteLine("- " + m1.Nome + " |  " + m1.Vida + "  |  " + m1.Mana + "  |  " + m1.Inteligencia + "  |  " + m1.Forca + "  |  " + m1.Level + "  | ");
                         Console.WriteLine("- " + m2.Nome + " |  " + m2.Vida + "  |  " + m2.Mana + "  |  " + m2.Inteligencia + "  |  " + m2.Forca + "  |  " + m2.Level + "  | ");
@@ -229,11 +230,32 @@ namespace Exercicio3
 
                                         if (perso == mo.Nome)
                                         {
+                                            Console.WriteLine("** Jogador 1 **");
+                                            Console.WriteLine("Nome: " + mo.Nome + " | Inteligencia: " + mo.Inteligencia + " | Nivel: " + mo.Level);
+                                            mago.attack(mo.Inteligencia, mo.Level);
+                                        }
+                                    }
 
+                                    //gerar jogador aleatorio para o pc
+                                    Random jogador = new Random();
+                                    int perso2 = 0;
+
+                                    perso2 = jogador.Next(magos.Count);
+
+                                    for (int s = 0; s < magos.Count; s++) //achando um personagem para o pc
+                                    {
+                                        Mago mo = magos[s];
+                                        String perso3 = perso2.ToString();
+
+                                        if (perso3 == mo.Nome)
+                                        {
+                                            Console.WriteLine("** Jogador 2 **");
+                                            Console.WriteLine("Nome: " + mo.Nome + " | Inteligencia: " + mo.Inteligencia + " | Nivel: " + mo.Level);
                                             mago.attack(mo.Inteligencia, mo.Level);
                                         }
                                     }
                                 }
+
                                 else
                                 {
                                     if(escolha == 2)
