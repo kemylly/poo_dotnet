@@ -249,7 +249,8 @@ namespace Exercicio3
                                     Console.WriteLine("\n** Jogador 2 **");
                                     Console.WriteLine("Nome: " + Nome1 + " | Inteligencia: " + Inteligencia1 + " | Nivel: " + Level1);
                                     mago.attack(Inteligencia1, Level1);
-                                
+                                    
+                                    
                                 }
 
                                 else
@@ -263,10 +264,24 @@ namespace Exercicio3
 
                                             if (perso == go.Nome)
                                             {
-
+                                                Console.WriteLine("** Jogador 1 **");
+                                                Console.WriteLine("Nome: " + go.Nome + " | Inteligencia: " + go.Inteligencia + " | Nivel: " + go.Level);
                                                 guerreiro.attack(go.Forca, go.Level);
                                             }
                                         }
+
+                                        //gerar jogador aleatorio para o pc
+                                        Random r1 = new Random(); //inteligencia aleatoria
+                                        Random r2 = new Random(); //level aleatorio
+
+                                        int Inteligencia1 = r1.Next(100);
+                                        int Level1 = r2.Next(5);
+
+                                        String Nome1 = "Pro-player";
+
+                                        Console.WriteLine("\n** Jogador 2 **");
+                                        Console.WriteLine("Nome: " + Nome1 + " | Inteligencia: " + Inteligencia1 + " | Nivel: " + Level1);
+                                        mago.attack(Inteligencia1, Level1);
                                         //int qtd = guerreiros.Count();
                                         //guerreiro.attack(perso, qtd);
                                     }
