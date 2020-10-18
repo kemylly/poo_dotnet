@@ -59,8 +59,14 @@ namespace Exercicio3
             //se guerreiro vencer aumentar o nivel dele
             //atributos vida e forca
             Level++;
-            Vida = +20;
-            Forca = +20;
+
+            Random r3 = new Random();
+            Mana = Mana + r3.Next(50);
+
+            Inteligencia = Inteligencia + r3.Next(50);
+
+            Console.WriteLine("Parabens Mestre Mago, voce subiu de nivel");
+            Console.WriteLine("Voce recebeu " + Mana + " de mana. E " + Inteligencia + " de inteligencia");
         }
 
         public void AprenderHabilidade(float XP, int Level, int Inteligencia, int Mana, int Forca)

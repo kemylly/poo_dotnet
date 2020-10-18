@@ -221,7 +221,7 @@ namespace Exercicio3
                                 //calculando ataque do personagem escolhido
                                 
 
-                                if (escolha == 1)
+                                if (escolha == 1) //personagem mago
                                 {
                                     //mago.attack(perso);
                                     for (int s = 0; s < magos.Count; s++) //achando personagem que o usuario escolheu
@@ -234,6 +234,8 @@ namespace Exercicio3
                                             Console.WriteLine("** Jogador 1 **");
                                             Console.WriteLine("Nome: " + mo.Nome + " | Inteligencia: " + mo.Inteligencia + " | Nivel: " + mo.Level);
                                             mago.attack(mo.Inteligencia, mo.Level);
+                                            ///int ataque1 = mago.attack(ataque);
+                                             
                                         }
                                     }
 
@@ -250,12 +252,21 @@ namespace Exercicio3
                                     Console.WriteLine("Nome: " + Nome1 + " | Inteligencia: " + Inteligencia1 + " | Nivel: " + Level1);
                                     mago.attack(Inteligencia1, Level1);
                                     
+                                    if(ataque1 > ataque2)
+                                    {
+                                        Console.WriteLine("\nVoce venceu");
+                                        mago.LvUp();
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("\nVoce perdeu");
+                                    }
                                     
                                 }
 
                                 else
                                 {
-                                    if(escolha == 2)
+                                    if(escolha == 2) //personagem gurreiro
                                     {
                                         for (int s = 0; s < guerreiros.Count; s++) //achando personagem que o usuario escolheu
                                         {
@@ -282,8 +293,16 @@ namespace Exercicio3
                                         Console.WriteLine("\n** Jogador 2 **");
                                         Console.WriteLine("Nome: " + Nome1 + " | Inteligencia: " + Inteligencia1 + " | Nivel: " + Level1);
                                         mago.attack(Inteligencia1, Level1);
-                                        //int qtd = guerreiros.Count();
-                                        //guerreiro.attack(perso, qtd);
+                                        
+                                        if (mago.attack > )
+                                        {
+                                            Console.WriteLine("\nVoce venceu");
+                                            mago.LvUp();
+                                        }
+                                        else
+                                        {
+                                            Console.WriteLine("\nVoce perdeu");
+                                        }
                                     }
                                     else
                                     {

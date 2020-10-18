@@ -42,16 +42,17 @@ namespace Exercicio3
         //metodos
         public void attack(int Inteligencia, int Level)
         {
-            int ataque1 = 0;
+            int ataque = 0;
             Random r = new Random();
             int aux;
 
             aux = r.Next(300);
 
-            ataque1 = Inteligencia * Level + aux; //calculando ataque
+            ataque = Inteligencia * Level + aux; //calculando ataque
 
-            Console.WriteLine("Numero Randomico : " + aux + " | Total do ataque: " + ataque1);
-
+            Console.WriteLine("Numero Randomico : " + aux + " | Total do ataque: " + ataque);
+            
+            
         }
 
         public override void LvUp()
@@ -59,8 +60,15 @@ namespace Exercicio3
             //se mago vencer aumentar o nivel dele
             //atributos mana e inteligencia
             Level++;
-            Mana = Mana + 10;
-            Inteligencia = Inteligencia + 20;
+
+            Random r3 = new Random();
+            Mana = Mana + r3.Next(50);
+
+            Inteligencia = Inteligencia + r3.Next(50);
+
+            Console.WriteLine("Parabens Mestre Mago, voce subiu de nivel");
+            Console.WriteLine("Voce recebeu " + Mana + " de mana. E " + Inteligencia + " de inteligencia");
+
         }
 
         public void AprenderMagia(float XP, int Level, int Inteligencia, int Mana, int Forca)
