@@ -12,11 +12,15 @@ namespace Exercicio3
         {
             //adicionando coisas ao mago e a lista dele
             Mago m1 = new Mago("Kemylly", 100, 80, 250, 100, 300, 5);
+            Mago m2 = new Mago("Felipe", 100, 80, 250, 100, 300, 5);
+            Mago m3 = new Mago("Soon", 100, 80, 250, 100, 300, 5);
             // List<Mago> Magos = new List<Mago>();
             // Magos.Add(m1);
 
             //adicionando coisas a guerreiro
             Guerreiro g1 = new Guerreiro("Vinycius", 100, 70, 260, 90, 350, 5);
+            Guerreiro g2 = new Guerreiro("Hak", 90, 70, 260, 90, 350, 5);
+            Guerreiro g3 = new Guerreiro("Yona", 110, 70, 260, 90, 350, 5);
             // List<Guerreiro> Guerreiros = new List<Guerreiro>();
             // Guerreiros.Add(g1);
 
@@ -28,8 +32,22 @@ namespace Exercicio3
             Mago mago = new Mago();
             Guerreiro guerreiro = new Guerreiro();
 
-            int perso = 0;
+            List<Mago> magos = new List<Mago>();
+            magos.Add(m1);
+            magos.Add(m2);
+            magos.Add(m3);
+
+            List<Guerreiro> guerreiros = new List<Guerreiro>();
+            guerreiros.Add(g1);
+            guerreiros.Add(g2);
+            guerreiros.Add(g3);
+
+            //int perso = 0;
+            String perso = "";
             int resp = 0;
+            int escolha = 0;
+            //String player = "";
+
             while(resp != 5)
             {
                 resp = Inicio();
@@ -39,19 +57,20 @@ namespace Exercicio3
 
                     Console.WriteLine("1 - Mago");
                     Console.WriteLine("2 - Guerreiro");
-                    int escolha = Convert.ToInt32(Console.ReadLine());
+                    escolha = Convert.ToInt32(Console.ReadLine());
 
                     if(escolha == 1)
                     {
                         Console.WriteLine(" NOME   |  VIDA | MANA | INTELIGENCIA | FORCA | LEVEL ");
                         Console.WriteLine("1 - " + m1.Nome + " |  " + m1.Vida + "  |  " + m1.Mana + "  |  " + m1.Inteligencia + "  |  " + m1.Forca + "  |  " + m1.Level + "  | ");
-                        
-                        Console.WriteLine("Digite o nome do personagem que deseja: ");
-                        Console.WriteLine(" ");
-                        perso = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("2 - " + m2.Nome + " |  " + m2.Vida + "  |  " + m2.Mana + "  |  " + m2.Inteligencia + "  |  " + m2.Forca + "  |  " + m2.Level + "  | ");
+                        Console.WriteLine("3 - " + m3.Nome + " |  " + m3.Vida + "  |  " + m3.Mana + "  |  " + m3.Inteligencia + "  |  " + m3.Forca + "  |  " + m3.Level + "  | ");
 
-                        
-                        //Mago mago = mago[perso]; 
+                        Console.WriteLine(" ");
+                        Console.Write("Digite o nome do personagem que deseja: ");
+                        perso = Console.ReadLine();
+                        //perso = Convert.ToInt32(Console.ReadLine());
+
                     }
                     else
                     {
@@ -59,10 +78,13 @@ namespace Exercicio3
                         {
                             Console.WriteLine(" NOME   |  VIDA | MANA | INTELIGENCIA | FORCA | LEVEL ");
                             Console.WriteLine("2 - " + g1.Nome + " |  " + g1.Vida + "  |  " + g1.Mana + "  |  " + g1.Inteligencia + "  |  " + g1.Forca + "  |  " + g1.Level + "  |  ");
-                            
-                            Console.WriteLine("Digite o nome do personagem que deseja: ");
+                            Console.WriteLine("2 - " + g2.Nome + " |  " + g2.Vida + "  |  " + g2.Mana + "  |  " + g2.Inteligencia + "  |  " + g2.Forca + "  |  " + g2.Level + "  |  ");
+                            Console.WriteLine("2 - " + g3.Nome + " |  " + g3.Vida + "  |  " + g3.Mana + "  |  " + g3.Inteligencia + "  |  " + g3.Forca + "  |  " + g3.Level + "  |  ");
+
                             Console.WriteLine(" ");
-                            perso = Convert.ToInt32(Console.ReadLine());
+                            Console.Write("Digite o nome do personagem que deseja: ");
+                            perso = Console.ReadLine();
+                            //perso = Convert.ToInt32(Console.ReadLine());
                         }
                         else
                         {
@@ -106,17 +128,68 @@ namespace Exercicio3
                                 Personagem p = new Personagem();
 
                                 //gerar random
-                                Random r = new Random();
-                                perso = r.Next(0.p.Personagem.Count);
-                                Personagem pc = p.Personagem[perso];
+                                //Random r = new Random();
+                                //int valor = r.Next(magos.Count);
+                                //Mago pc = ;
+                                //Mago mago1 = magos[perso];
+                                //player = r.Next(0.magos.Count);
+                                //Mago pc = magos.[perso];
+
+                                //int qtd = guerreiros.Count();
+                                //Guerreiro guerreiro1 = new Guerreiro(qtd);
 
                                 //calcular ataque de ambos e verificar quem é o vencedor
-                                mago.attack();
-                                guerreiro.attack();
+
+                                //int valor = r.Next(qtd);
+
+                                //calculando ataque do personagem escolhido
+                                
+
+                                if (escolha == 1)
+                                {
+                                    //mago.attack(perso);
+                                    for (int s = 0; s < guerreiros.Count; s++)
+                                    {
+                                        Mago mo = magos[s];
+                                        //String ps = guerreiro[s];
+
+                                        if (perso == mo.Nome)
+                                        {
+
+                                            guerreiro.attack(mo.Inteligencia, mo.Level);
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if(escolha == 2)
+                                    {
+                                        for (int s = 0; s < guerreiros.Count; s++)
+                                        {
+                                            Guerreiro go = guerreiros[s];
+                                            //String ps = guerreiro[s];
+
+                                            if (perso == go.Nome)
+                                            {
+
+                                                guerreiro.attack(go.Inteligencia, go.Level);
+                                            }
+                                        }
+                                        //int qtd = guerreiros.Count();
+                                        //guerreiro.attack(perso, qtd);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Parece que voce não escolheu um personagem ainda!");
+                                        Console.WriteLine("Va em Listar personagens e escolha algum");
+
+                                    }
+
+                                }
 
                                 //verificar vencedor e aumentar o nivel dele
-                                mago.LvUp();
-                                guerreiro.LvUp();
+                                //mago.LvUp();
+                                //guerreiro.LvUp();
 
                                 Console.ReadKey();
                             }

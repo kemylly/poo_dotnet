@@ -39,17 +39,20 @@ namespace Exercicio3
         }
 
         //metodos
-        public void attack()
+        public void attack(int Inteligencia, int Level)
         {
             int ataque1 = 0;
-            Random r = new Random();
             int aux;
 
-            aux = r.Next(0.300);
-
+            //Calculando numero randomico e ataque
+            Random r = new Random();
+            //int valor = r.Next(qtd);
+            aux = r.Next(300);
             ataque1 = Inteligencia * Level + aux;
 
+            Console.WriteLine("Mens: "+ Inteligencia + " " + Level + " " + aux + " " + ataque1);
             //verificar de quem é o maior ataque
+
         }
         public override void LvUp()
         {
