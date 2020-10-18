@@ -41,11 +41,23 @@ namespace Exercicio3
         //metodos
         public void attack()
         {
+            int ataque1 = 0;
+            Random r = new Random();
+            int aux;
 
+            aux = r.Next(0.300);
+
+            ataque1 = Inteligencia * Level + aux;
+
+            //verificar de quem é o maior ataque
         }
         public override void LvUp()
         {
-
+            //se guerreiro vencer aumentar o nivel dele
+            //atributos vida e forca
+            Level++;
+            Vida = +20;
+            Forca = +20;
         }
 
         public void AprenderHabilidade()
@@ -70,14 +82,15 @@ namespace Exercicio3
 
             if (elemento == 1) //agua
             {
-                if (Nome == "Kemylly")
-                {
+                //tenho que identificar qual é o personagem
+                //if (Nome == "Kemylly")
+                //{
                     XP = XP + 10;
                     Level = Level + 1;
                     Inteligencia = Inteligencia + 50;
                     Mana = Mana + 50;
                     Forca = Forca + 10;
-                }
+                //}
 
             }
             else
