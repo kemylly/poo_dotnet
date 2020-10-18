@@ -50,7 +50,73 @@ namespace Exercicio3
 
         public void AprenderHabilidade()
         {
+            Console.WriteLine("Digite o numero da habilidade que deseja aprender: ");
 
+            List<String> Habilidade = new List<String>();
+            Habilidade.Add("Espada");
+            Habilidade.Add("Lutar");
+            Habilidade.Add("Arco");
+            Habilidade.Add("Lanca");
+
+            int num = 1;
+            for (int h = 0; h < Habilidade.Count; h++)
+            {
+                Console.WriteLine(num + " - Habilidade: " + Habilidade[h]);
+                num++;
+            }
+
+            Console.Write("Resposta: ");
+            int elemento = Convert.ToInt32(Console.ReadLine());
+
+            if (elemento == 1) //agua
+            {
+                if (Nome == "Kemylly")
+                {
+                    XP = XP + 10;
+                    Level = Level + 1;
+                    Inteligencia = Inteligencia + 50;
+                    Mana = Mana + 50;
+                    Forca = Forca + 10;
+                }
+
+            }
+            else
+            {
+                if (elemento == 2)
+                {
+                    XP = XP + 15;
+                    Level = Level + 1;
+                    Inteligencia = Inteligencia + 40;
+                    Mana = Mana + 40;
+                    Forca = Forca + 60;
+                }
+                else
+                {
+                    if (elemento == 3)
+                    {
+                        XP = XP + 15;
+                        Level = Level + 1;
+                        Inteligencia = Inteligencia + 80;
+                        Mana = Mana + 50;
+                        Forca = Forca + 40;
+                    }
+                    else
+                    {
+                        if (elemento == 4)
+                        {
+                            XP = XP + 10;
+                            Level = Level + 1;
+                            Inteligencia = Inteligencia + 30;
+                            Mana = Mana + 60;
+                            Forca = Forca + 70;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Valor invalido");
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -28,12 +28,21 @@ namespace Exercicio3
             Mago mago = new Mago();
             Guerreiro guerreiro = new Guerreiro();
 
+            int perso = 0;
             int resp = 0;
             while(resp != 5)
             {
                 resp = Inicio();
                 if (resp == 1)
                 {
+                    
+                    Console.WriteLine(" NOME   |  VIDA | MANA | INTELIGENCIA | FORCA | LEVEL ");
+                    Console.WriteLine("1 - " + g1.Nome + " |  " + g1.Vida + "  |  " + g1.Mana + "  |  " + g1.Inteligencia + "  |  " + g1.Forca + "  |  " + g1.Level + "  |  ");
+                    Console.WriteLine("2 - " + m1.Nome + " |  " + m1.Vida + "  |  " + m1.Mana + "  |  " + m1.Inteligencia + "  |  " + m1.Forca + "  |  " + m1.Level + "  | ");
+                   
+                    Console.WriteLine("Digite o numero do personagem que deseja: ");
+                    Console.WriteLine(" ");
+                    perso = Convert.ToInt32(Console.ReadLine());
 
                     Console.ReadKey();
                 }
@@ -41,6 +50,7 @@ namespace Exercicio3
                 {
                     if(resp == 2)
                     {
+                        
                         mago.AprenderMagia();
                         Console.ReadKey();
                     }
@@ -76,6 +86,8 @@ namespace Exercicio3
                 Console.WriteLine("5 - Sair ");
                 Console.Write("Resposta: ");
                 int resp = Convert.ToInt32(Console.ReadLine());
+
+                Console.Clear();
                 return resp;
             }
 
