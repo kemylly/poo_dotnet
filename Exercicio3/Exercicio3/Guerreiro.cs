@@ -50,9 +50,8 @@ namespace Exercicio3
             aux = r.Next(300);
             ataque1 = Forca * Level + aux;
 
-            Console.WriteLine("Mens: "+ Forca + " " + Level + " " + aux + " = " + ataque1);
-            //verificar de quem é o maior ataque
-
+            Console.WriteLine("Numero Randomico : " + aux + " | Total do ataque: " + ataque1);
+            
         }
 
         public override void LvUp() //subir de nivel se eu ganhar uma batalha

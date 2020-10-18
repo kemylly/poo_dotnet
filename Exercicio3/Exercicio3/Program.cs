@@ -103,6 +103,7 @@ namespace Exercicio3
                     //perso = Convert.ToInt32(Console.ReadLine());
 
                     Console.ReadKey();
+                    Console.Clear();
                 }
                 //fim da listagem de personagens
 
@@ -237,23 +238,18 @@ namespace Exercicio3
                                     }
 
                                     //gerar jogador aleatorio para o pc
-                                    Random jogador = new Random();
-                                    int perso2 = 0;
+                                    Random r1 = new Random(); //inteligencia aleatoria
+                                    Random r2 = new Random(); //level aleatorio
 
-                                    perso2 = jogador.Next(magos.Count);
+                                    int Inteligencia1 = r1.Next(100);
+                                    int Level1 = r2.Next(5);
 
-                                    for (int s = 0; s < magos.Count; s++) //achando um personagem para o pc
-                                    {
-                                        Mago mo = magos[s];
-                                        String perso3 = perso2.ToString();
+                                    String Nome1 = "Pro-player";
 
-                                        if (perso3 == mo.Nome)
-                                        {
-                                            Console.WriteLine("** Jogador 2 **");
-                                            Console.WriteLine("Nome: " + mo.Nome + " | Inteligencia: " + mo.Inteligencia + " | Nivel: " + mo.Level);
-                                            mago.attack(mo.Inteligencia, mo.Level);
-                                        }
-                                    }
+                                    Console.WriteLine("\n** Jogador 2 **");
+                                    Console.WriteLine("Nome: " + Nome1 + " | Inteligencia: " + Inteligencia1 + " | Nivel: " + Level1);
+                                    mago.attack(Inteligencia1, Level1);
+                                
                                 }
 
                                 else
@@ -278,9 +274,6 @@ namespace Exercicio3
                                     {
                                         Console.WriteLine("Parece que voce não escolheu um personagem ainda!");
                                         Console.WriteLine("Va em Listar personagens e escolha algum");
-
-                                        Console.Clear();
-
                                     }
 
                                 }
@@ -290,6 +283,7 @@ namespace Exercicio3
                                 //guerreiro.LvUp();
 
                                 Console.ReadKey();
+                                Console.Clear();
                             }
                             //fim da luta
 

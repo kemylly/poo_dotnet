@@ -52,7 +52,6 @@ namespace Exercicio3
 
             Console.WriteLine("Numero Randomico : " + aux + " | Total do ataque: " + ataque1);
 
-            //verificar de quem é o maior ataque
         }
 
         public override void LvUp()
