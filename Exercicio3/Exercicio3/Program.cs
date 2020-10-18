@@ -57,14 +57,15 @@ namespace Exercicio3
 
                     Console.WriteLine("1 - Mago");
                     Console.WriteLine("2 - Guerreiro");
+                    Console.Write("Digite o numero da sua escolha: ");
                     escolha = Convert.ToInt32(Console.ReadLine());
 
                     if(escolha == 1)
                     {
                         Console.WriteLine(" NOME   |  VIDA | MANA | INTELIGENCIA | FORCA | LEVEL ");
-                        Console.WriteLine("1 - " + m1.Nome + " |  " + m1.Vida + "  |  " + m1.Mana + "  |  " + m1.Inteligencia + "  |  " + m1.Forca + "  |  " + m1.Level + "  | ");
-                        Console.WriteLine("2 - " + m2.Nome + " |  " + m2.Vida + "  |  " + m2.Mana + "  |  " + m2.Inteligencia + "  |  " + m2.Forca + "  |  " + m2.Level + "  | ");
-                        Console.WriteLine("3 - " + m3.Nome + " |  " + m3.Vida + "  |  " + m3.Mana + "  |  " + m3.Inteligencia + "  |  " + m3.Forca + "  |  " + m3.Level + "  | ");
+                        Console.WriteLine("- " + m1.Nome + " |  " + m1.Vida + "  |  " + m1.Mana + "  |  " + m1.Inteligencia + "  |  " + m1.Forca + "  |  " + m1.Level + "  | ");
+                        Console.WriteLine("- " + m2.Nome + " |  " + m2.Vida + "  |  " + m2.Mana + "  |  " + m2.Inteligencia + "  |  " + m2.Forca + "  |  " + m2.Level + "  | ");
+                        Console.WriteLine("- " + m3.Nome + " |  " + m3.Vida + "  |  " + m3.Mana + "  |  " + m3.Inteligencia + "  |  " + m3.Forca + "  |  " + m3.Level + "  | ");
 
                         Console.WriteLine(" ");
                         Console.Write("Digite o nome do personagem que deseja: ");
@@ -77,9 +78,9 @@ namespace Exercicio3
                         if(escolha == 2)
                         {
                             Console.WriteLine(" NOME   |  VIDA | MANA | INTELIGENCIA | FORCA | LEVEL ");
-                            Console.WriteLine("2 - " + g1.Nome + " |  " + g1.Vida + "  |  " + g1.Mana + "  |  " + g1.Inteligencia + "  |  " + g1.Forca + "  |  " + g1.Level + "  |  ");
-                            Console.WriteLine("2 - " + g2.Nome + " |  " + g2.Vida + "  |  " + g2.Mana + "  |  " + g2.Inteligencia + "  |  " + g2.Forca + "  |  " + g2.Level + "  |  ");
-                            Console.WriteLine("2 - " + g3.Nome + " |  " + g3.Vida + "  |  " + g3.Mana + "  |  " + g3.Inteligencia + "  |  " + g3.Forca + "  |  " + g3.Level + "  |  ");
+                            Console.WriteLine("- " + g1.Nome + " |  " + g1.Vida + "  |  " + g1.Mana + "  |  " + g1.Inteligencia + "  |  " + g1.Forca + "  |  " + g1.Level + "  |  ");
+                            Console.WriteLine("- " + g2.Nome + " |  " + g2.Vida + "  |  " + g2.Mana + "  |  " + g2.Inteligencia + "  |  " + g2.Forca + "  |  " + g2.Level + "  |  ");
+                            Console.WriteLine("- " + g3.Nome + " |  " + g3.Vida + "  |  " + g3.Mana + "  |  " + g3.Inteligencia + "  |  " + g3.Forca + "  |  " + g3.Level + "  |  ");
 
                             Console.WriteLine(" ");
                             Console.Write("Digite o nome do personagem que deseja: ");
@@ -118,6 +119,11 @@ namespace Exercicio3
                                 if (perso == ma.Nome)
                                 {
                                     mago.AprenderMagia(ma.XP, ma.Inteligencia, ma.Level, ma.Mana, ma.Forca);
+
+                                    Console.WriteLine("Poderes atuais: ");
+                                    Console.WriteLine("  NOME   |  XP  | MANA | INTELIGENCIA | FORCA | LEVEL ");
+                                    Console.WriteLine("-> " + ma.Nome + " |  " + ma.XP + "  |  " + ma.Inteligencia + "  |  " + ma.Level + "  |  " + ma.Mana + "  |  " + ma.Forca + "  | ");
+
                                 }
                             }
                         }
@@ -126,20 +132,21 @@ namespace Exercicio3
                             if(escolha == 2)
                             {
                                 Console.WriteLine("Voce escolheu um personagem Guerreiro. Ele nao consgue aprender magia.");
-                                Console.WriteLine("Va em Listar Habilidades e escolha alguma.");
+                                Console.WriteLine("Vá em Listar Habilidades e escolha alguma.");
 
-                                Console.Clear();
+                                //Console.Clear();
                             }
                             else
                             {
                                 Console.WriteLine("Parece que voce não escolheu um personagem ainda!");
-                                Console.WriteLine("Va em Listar personagens e escolha algum");
+                                Console.WriteLine("Vá em Listar personagens e escolha algum.");
 
-                                Console.Clear();
+                                //Console.Clear();
                             }
                         }
                         //mago.AprenderMagia();
                         Console.ReadKey();
+                        Console.Clear();
                     }
                     //fim do aprender magia
 
@@ -150,9 +157,10 @@ namespace Exercicio3
                             if (escolha == 1)
                             {
                                 Console.WriteLine("Voce escolheu um personagem Mago. Ele nao consgue aprender Habilidades.");
-                                Console.WriteLine("Va em Listar Magias e escolha alguma.");
+                                Console.WriteLine("Vá em Listar Magias e escolha alguma.");
 
-                                Console.Clear();
+                                //Console.ReadKey();
+                                //Console.Clear();
                             }
                             else
                             {
@@ -165,6 +173,10 @@ namespace Exercicio3
                                         if (perso == gr.Nome)
                                         {
                                             guerreiro.AprenderHabilidade(gr.XP, gr.Inteligencia, gr.Level, gr.Mana, gr.Forca);
+                                            
+                                            Console.WriteLine("Poderes atuais: ");
+                                            Console.WriteLine("  NOME   |  XP  | MANA | INTELIGENCIA | FORCA | LEVEL ");
+                                            Console.WriteLine("-> " + gr.Nome + " |  " + gr.XP + "  |  " + gr.Inteligencia + "  |  " + gr.Level + "  |  " + gr.Mana + "  |  " + gr.Forca + "  | ");
                                         }
                                     }
                                    
@@ -173,12 +185,11 @@ namespace Exercicio3
                                 {
                                     Console.WriteLine("Parece que voce não escolheu um personagem ainda!");
                                     Console.WriteLine("Va em Listar personagens e escolha algum");
-
-                                    Console.Clear();
                                 }
                             }
                             //guerreiro.AprenderHabilidade();
                             Console.ReadKey();
+                            Console.Clear();
                         }
                         //fim de aprender habilidade
 
@@ -211,7 +222,7 @@ namespace Exercicio3
                                 if (escolha == 1)
                                 {
                                     //mago.attack(perso);
-                                    for (int s = 0; s < magos.Count; s++)
+                                    for (int s = 0; s < magos.Count; s++) //achando personagem que o usuario escolheu
                                     {
                                         Mago mo = magos[s];
                                         //String ps = guerreiro[s];
@@ -227,7 +238,7 @@ namespace Exercicio3
                                 {
                                     if(escolha == 2)
                                     {
-                                        for (int s = 0; s < guerreiros.Count; s++)
+                                        for (int s = 0; s < guerreiros.Count; s++) //achando personagem que o usuario escolheu
                                         {
                                             Guerreiro go = guerreiros[s];
                                             //String ps = guerreiro[s];
